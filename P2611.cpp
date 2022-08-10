@@ -15,12 +15,12 @@ int f(int x,int &y) {
 int main() {
   scanf("%d",&n);
   for(int i = 1; i <= n; i++) {
-    fa[i]=i;
+    fa[i] = i;
   }
   int x,y;
   int ans = 998244353;
   for(int i = 1; i <= n; i++) {
-    scanf("%d",x);
+    scanf("%d",&x);
     y = 0;
     if(f(x,y) == i) {
       ans = min(ans, y);
@@ -28,6 +28,6 @@ int main() {
       fa[i] = x;
     }
   }
-  printf("%d",ans);
+  printf("%d\n",ans);
   return 0;
 }
